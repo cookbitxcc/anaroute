@@ -21,6 +21,7 @@ PROJECT_NAMESPACE_START
 
 void Parser::parseLef(const String_t& filename) {
   fprintf(stdout, "Parsing LEF file %s\n", filename.c_str());
+  fprintf(stdout, "......................................................................Parsing LEF file\n");
   LefReader lefr(_cir.lef());
   lefr.parse(filename);
   _cir.lef().constructViaTableFromViaRule();
